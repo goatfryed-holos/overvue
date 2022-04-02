@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OverVue</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/theme/black.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/highlight/monokai.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section data-markdown="/slides/intro.md"
+                 data-separator="^\r?\n~~~\r?\n$"
+                 data-separator-vertical="^\r?\n---\r?\n$"
+                 data-separator-notes="^Note:"
+                 data-charset="utf-8">
+            </section>
+            <section data-markdown="/slides/caveats.md"
+                     data-separator="^\r?\n~~~\r?\n$"
+                     data-separator-vertical="^\r?\n---\r?\n$"
+                     data-separator-notes="^Note:"
+                     data-charset="utf-8">
+            </section>
+            <section data-separator="^\r?\n~~~\r?\n$"
+                     data-separator-vertical="^\r?\n---\r?\n$"
+                     data-separator-notes="^Note:"
+                     >
+                <section>
+                    <h2>Put it in numbers</h2>
+                    Stackoverflow survey 2021
+                </section>
+                <section data-background="/slides/assets/loved-vs-dreaded.png"
+                         data-background-size="contain"
+                ></section>
+                <section>
+                    <h3>Most wanted</h3>
+                    <img data-src="/slides/assets/wanted.png">
+                </section>
+                <section>
+                    <h3>Market share</h3>
+                    <img data-src="/slides/assets/market-share.png">
+                    <p>place #7 according to https://webtechsurvey.com/technology/vue.js</p>
+                </section>
+            </section>
+            <section data-markdown="/slides/frontend-paradigms.md"
+                     data-separator="^\r?\n~~~\r?\n$"
+                     data-separator-vertical="^\r?\n---\r?\n$"
+                     data-separator-notes="^Note:"
+                     data-charset="utf-8">
+            </section>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/dist/reveal.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/markdown/markdown.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/notes/notes.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.3.1/plugin/highlight/highlight.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        let deck = new Reveal({
+            plugins: [
+                RevealMarkdown,
+                RevealNotes,
+                RevealHighlight,
+            ],
+            highlight: {
+            },
+            markdown: {
+                smartypants: true
+            }
+        })
+        deck.initialize();
+    </script>
+</body>
+</html>
