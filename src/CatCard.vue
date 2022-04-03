@@ -1,10 +1,14 @@
 <template>
-  <div @click="handleCardClick" @keydown.enter="handleCardClick" tabindex="0">
-    <h2>Look at my cat {{name}}</h2>
+  <div @click="handleCardClick">
+    <h2>Look at my cat {{name}} in {{filter}}</h2>
     <div >
-      <img :src="`https://cataas.com/cat/${mode}`" alt="cat">
+      <img :src="url" alt="cat">
     </div>
     <slot />
+    <div>
+      <button @click.stop="filter = 'standard'">Standard</button>
+      <button @click.stop="filter = 'paint'">Painted</button>
+    </div>
   </div>
 </template>
 
@@ -14,6 +18,17 @@ export default {
   methods: {
     handleCardClick() {
       alert(`${this.name} is ${this.mode}`);
+    },
+  },
+  data() {
+    return {
+      filter: 'standard',
+    };
+  },
+  computed: {
+    url() {
+      const query = new URLSearchParams({ filter: this.filter });
+      return `https://cataas.com/cat/${this.mode}?${query}`;
     },
   },
 };
