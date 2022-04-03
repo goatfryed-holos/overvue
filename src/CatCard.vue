@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div @click="handleCardClick" @keydown="handleCardClick">
     <h2>Look at my cat {{name}}</h2>
-    <div>
+    <div >
       <img :src="`https://cataas.com/cat/${mode}`" alt="cat">
     </div>
     <slot />
@@ -11,5 +11,10 @@
 <script>
 export default {
   props: ['name', 'mode'],
+  methods: {
+    handleCardClick() {
+      alert(`${this.name} is ${this.mode}`);
+    },
+  },
 };
 </script>
