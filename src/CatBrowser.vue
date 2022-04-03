@@ -1,9 +1,22 @@
 <template>
-  <CatCard v-for="cat in cats" :key="cat.id"
-          :name="cat.name" :url="applyCatFilters(cat)"
-           @filterSelect="cat.filter = $event"
-  />
+  <section>
+    <CatCard v-for="cat in cats" :key="cat.id"
+            :name="cat.name" :url="applyCatFilters(cat)"
+             @filterSelect="cat.filter = $event"
+    />
+  </section>
 </template>
+
+<style scoped lang="scss">
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+</style>
 
 <script>
 import { defineComponent } from 'vue';
