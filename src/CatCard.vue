@@ -1,5 +1,5 @@
 <template>
-  <div @click="handleCardClick" @keydown="handleCardClick">
+  <div @click="handleCardClick" @keydown.enter="handleCardClick" tabindex="0">
     <h2>Look at my cat {{name}}</h2>
     <div >
       <img :src="`https://cataas.com/cat/${mode}`" alt="cat">
