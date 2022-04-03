@@ -8,7 +8,7 @@ const catFacts = axios.create({
   baseURL: 'https://cat-fact.herokuapp.com',
 });
 
-async function getRandomCat() {
+export async function getRandomCat() {
   const catRequest = cataas.get('/cat', { params: { json: true } });
   const factRequest = catFacts.get(
     '/facts/random',
@@ -30,7 +30,3 @@ export function apply({ url }, { filter }) {
   }
   return urlObject.toString();
 }
-
-export default {
-  getRandomCat,
-};

@@ -1,14 +1,6 @@
  <template>
    <section>
-     <CatCard name="Steve" mode="cute">
-       <p>Isn't he cute?</p>
-     </CatCard>
-     <CatCard name="Carol" mode="sleepy">
-       <p>Isn't she sleepy?</p>
-     </CatCard>
-     <CatCard name="Matilda" mode="evil">
-       <p>Isn't she evil?</p>
-     </CatCard>
+     <CatBrowser />
    </section>
  </template>
 
@@ -34,9 +26,11 @@
  }
  </style>
 <script>
-import CatCard from '@/CatCard.vue';
+import CatBrowser from '@/CatBrowser.vue';
 
 export default {
-  components: { CatCard },
+  components: {
+    CatBrowser,
+  },
 };
 </script>
