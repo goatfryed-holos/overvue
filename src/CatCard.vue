@@ -2,7 +2,7 @@
   <div>
     <h2>Look at my cat {{name}}</h2>
     <div>
-      <img src="https://cataas.com/cat/cute" alt="cat">
+      <img :src="`https://cataas.com/cat/${mode}`" alt="cat">
     </div>
     <slot />
   </div>
@@ -10,6 +10,6 @@
 
 <script>
 export default {
-  props: ['name'],
+  props: ['name', 'mode'],
 };
 </script>

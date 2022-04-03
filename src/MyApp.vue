@@ -1,12 +1,12 @@
  <template>
    <section>
-     <CatCard name="Steve">
+     <CatCard name="Steve" mode="cute">
        <p>Isn't he cute?</p>
      </CatCard>
-     <CatCard name="Carol">
+     <CatCard name="Carol" mode="sleepy">
        <p>Isn't she sleepy?</p>
      </CatCard>
-     <CatCard name="Matilda">
+     <CatCard name="Matilda" mode="evil">
        <p>Isn't she evil?</p>
      </CatCard>
    </section>
