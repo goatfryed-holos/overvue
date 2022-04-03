@@ -1,12 +1,14 @@
  <template>
    <section>
-     <div>
-       <h2>Look at my cat</h2>
-       <div>
-         <img src="https://cataas.com/cat/cute" alt="cat">
-       </div>
-       <p>Isn't it cute?</p>
-     </div>
+     <CatCard name="Steve">
+       <p>Isn't he cute?</p>
+     </CatCard>
+     <CatCard name="Carol">
+       <p>Isn't she sleepy?</p>
+     </CatCard>
+     <CatCard name="Matilda">
+       <p>Isn't she evil?</p>
+     </CatCard>
    </section>
  </template>
 
@@ -31,3 +33,10 @@
    max-height: 20em;
  }
  </style>
+<script>
+import CatCard from '@/CatCard.vue';
+
+export default {
+  components: { CatCard },
+};
+</script>
