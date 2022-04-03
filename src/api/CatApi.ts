@@ -23,6 +23,14 @@ async function getRandomCat() {
   };
 }
 
+export function apply({ url }, { filter }) {
+  const urlObject = new URL(url);
+  if (filter) {
+    urlObject.searchParams.set('filter', filter);
+  }
+  return urlObject.toString();
+}
+
 export default {
   getRandomCat,
 };
