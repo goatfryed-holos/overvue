@@ -1,6 +1,6 @@
 <template>
   <div @click="handleCardClick" class="base">
-    <h2>Look at my cat {{name}}</h2>
+    <h2>Look at my cat {{cat.name}}</h2>
     <div class="img-container">
       <img :src="url" alt="cat" :key="url">
     </div>
@@ -55,7 +55,7 @@ export default defineComponent({
   },
   methods: {
     handleCardClick() {
-      this.catsService.findFact(this.cat);
+      this.catsService.selectCat(this.cat);
     },
     selectFilter(filter) {
       this.catsService.selectFilter(this.cat, filter);

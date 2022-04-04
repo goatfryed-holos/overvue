@@ -1,4 +1,8 @@
 <template>
+  <div>
+    <CatCard v-if="selected"
+      :cat="selected" />
+  </div>
  <CatBrowser :cats="cats" />
 </template>
 
@@ -7,9 +11,11 @@ import CatBrowser from '@/CatBrowser.vue';
 import { defineComponent } from 'vue';
 import { getRandomCat } from '@/api/CatApi';
 import faker from 'faker';
+import CatCard from '@/CatCard.vue';
 
 export default defineComponent({
   components: {
+    CatCard,
     CatBrowser,
   },
   data() {
