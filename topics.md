@@ -8,4 +8,8 @@
    4. methods
    5. data
    6. computed
-   7. watch
+3. watch ?
+4. patterns
+   1. provide/inject
+   2. compound component
+5. slot render props

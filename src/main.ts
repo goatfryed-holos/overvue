@@ -1,3 +1,4 @@
+import 'wired-elements';
 import { createApp } from 'vue';
 import MyApp from './MyApp.vue';
 

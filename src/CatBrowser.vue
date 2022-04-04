@@ -1,6 +1,6 @@
 <template>
   <section>
-    <CatCard v-for="cat in cats" :key="cat.id"
+    <AdvancedCatCard v-for="cat in cats" :key="cat.id"
              :cat="cat"
     />
   </section>
@@ -21,9 +21,10 @@ section {
 import { defineComponent } from 'vue';
 import { getRandomCat, apply } from '@/api/CatApi';
 import CatCard from '@/CatCard.vue';
+import AdvancedCatCard from '@/advancedCard/AdvancedCatCard.vue';
 
 export default defineComponent({
-  components: { CatCard },
+  components: { AdvancedCatCard },
   props: ['cats'],
 });
 </script>
