@@ -2,13 +2,13 @@
   <div @click="handleCardClick" class="base">
     <h2>Look at my cat {{name}}</h2>
     <div class="img-container">
-      <img :src="url" alt="cat">
+      <img :src="url" alt="cat" :key="url">
     </div>
     <slot />
     <div>
-      <button @click.stop="$emit('filterSelect', null)">Standard</button>
-      <button @click.stop="$emit('filterSelect', 'paint')">Painted</button>
-      <button @click.stop="$emit('filterSelect', 'sepia')">Sepia</button>
+      <button @click.stop="selectFilter(null)">Standard</button>
+      <button @click.stop="selectFilter('negative')">Negative</button>
+      <button @click.stop="selectFilter('sepia')">Sepia</button>
     </div>
   </div>
 </template>
@@ -41,13 +41,25 @@ img {
 </style>
 
 <script>
-export default {
+import { defineComponent } from 'vue';
+import { apply } from '@/api/CatApi';
+
+export default defineComponent({
   emits: ['filterSelect'],
-  props: ['name', 'url'],
-  methods: {
-    handleCardClick() {
-      alert(`${this.name} is ${this.mode}`);
+  props: ['cat'],
+  inject: ['catsService'],
+  computed: {
+    url() {
+      return apply(this.cat.data, { filter: this.cat.filter });
     },
   },
-};
+  methods: {
+    handleCardClick() {
+      this.catsService.findFact(this.cat);
+    },
+    selectFilter(filter) {
+      this.catsService.selectFilter(this.cat, filter);
+    },
+  },
+});
 </script>

@@ -11,12 +11,14 @@
   "dependencies": {
     "axios": "^0.26.1",
     "core-js": "^3.8.3",
+    "faker": "5.5.3",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
     "wired-elements": "^3.0.0-rc.6"
   },
   "devDependencies": {
     "@types/jest": "^27.0.1",
+    "@types/faker": "5.5.3",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vue/cli-plugin-babel": "~5.0.0",
@@ -55,7 +57,8 @@
       "ecmaVersion": 2020
     },
     "rules": {
-      "vuejs-accessibility/click-events-have-key-events": "warn"
+      "vuejs-accessibility/click-events-have-key-events": "warn",
+      "no-param-reassign": "off"
     },
     "overrides": [
       {
